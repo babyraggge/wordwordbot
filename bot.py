@@ -1,7 +1,7 @@
 import logging
-import config
 import keyboard
 import words
+import config
 
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher import FSMContext

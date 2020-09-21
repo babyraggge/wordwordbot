@@ -1,6 +1,4 @@
-from aiogram.types import ReplyKeyboardRemove, \
-    ReplyKeyboardMarkup, KeyboardButton, \
-    InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 button_add_words = KeyboardButton('Добавить слова')
 button_learn_words = KeyboardButton('Учить слова')
