@@ -10,14 +10,14 @@ def add_word_pair(word_pair):
     except ValueError:
         return False
 
-    db_worker = sql.SQLiter(config.database)
+    db_worker = sql.SQLiter(config.database_name)
     db_worker.insert(lat, ru)
     db_worker.close()
     return True
 
 
 def get_random_pair():
-    db_worker = sql.SQLiter(config.database)
+    db_worker = sql.SQLiter(config.database_name)
     try:
         random_row = random.randint(1, db_worker.count_rows())
         row = db_worker.select_single(random_row)
@@ -29,7 +29,7 @@ def get_random_pair():
 
 
 def clean_database():
-    db_worker = sql.SQLiter(config.database)
+    db_worker = sql.SQLiter(config.database_name)
     try:
         db_worker.clr()
         return True
